@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Demo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DemoViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-MO-Mvt">
+                                <rect key="frame" x="20" y="420" width="216" height="40"/>
+                                <color key="backgroundColor" white="0.54711745689655178" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ztc-lk-wQo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerNetworkActivity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8x-TO-5pj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txv-Vp-Ija">
+                                <rect key="frame" x="244" y="420" width="216" height="40"/>
+                                <color key="backgroundColor" white="0.81082974139999997" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="woq-R6-q0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Deregister">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deregisterNetworkActivity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFN-tF-XnR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered Network Activities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="war-iH-Qu7">
+                                <rect key="frame" x="127" y="55" width="226" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMA-3D-mTR">
+                                <rect key="frame" x="229" y="84" width="23" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOK-NI-hJ1">
+                                <rect key="frame" x="20" y="372" width="216" height="40"/>
+                                <color key="backgroundColor" white="0.54711745690000002" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sLC-5z-jfJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Async Register">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="asyncRegisterNetworkActivity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="85D-vb-8X4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e2-qA-orL">
+                                <rect key="frame" x="244" y="372" width="216" height="40"/>
+                                <color key="backgroundColor" white="0.81082974139999997" alpha="0.66000000000000003" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Sx2-Kr-CHf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Async Deregister">
+                                    <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="asyncDeregisterNetworkActivity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vo6-nL-V8E"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Txv-Vp-Ija" firstAttribute="top" secondItem="1e2-qA-orL" secondAttribute="bottom" constant="8" id="2y8-Sa-Xf8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Txv-Vp-Ija" secondAttribute="bottom" constant="20" id="4SJ-4u-Fr5"/>
+                            <constraint firstItem="TOK-NI-hJ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="4ZM-nJ-FcG"/>
+                            <constraint firstItem="1e2-qA-orL" firstAttribute="width" secondItem="Txv-Vp-Ija" secondAttribute="width" id="8u8-ri-LpH"/>
+                            <constraint firstItem="zMA-3D-mTR" firstAttribute="top" secondItem="war-iH-Qu7" secondAttribute="bottom" constant="8" id="Gca-DY-QBj"/>
+                            <constraint firstItem="F2s-MO-Mvt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MD0-tI-aeg"/>
+                            <constraint firstAttribute="centerX" secondItem="war-iH-Qu7" secondAttribute="centerX" id="Mh8-J2-C7M"/>
+                            <constraint firstAttribute="trailing" secondItem="1e2-qA-orL" secondAttribute="trailing" constant="20" id="NB8-4O-LyD"/>
+                            <constraint firstItem="F2s-MO-Mvt" firstAttribute="top" secondItem="TOK-NI-hJ1" secondAttribute="bottom" constant="8" id="O7B-7G-h2h"/>
+                            <constraint firstItem="TOK-NI-hJ1" firstAttribute="width" secondItem="F2s-MO-Mvt" secondAttribute="width" id="R5H-vI-grz"/>
+                            <constraint firstItem="F2s-MO-Mvt" firstAttribute="height" secondItem="Txv-Vp-Ija" secondAttribute="height" id="X5e-hm-qjR"/>
+                            <constraint firstItem="Txv-Vp-Ija" firstAttribute="leading" secondItem="F2s-MO-Mvt" secondAttribute="trailing" constant="8" id="Xb4-0s-tSj"/>
+                            <constraint firstItem="F2s-MO-Mvt" firstAttribute="width" secondItem="Txv-Vp-Ija" secondAttribute="width" id="YeA-9G-ukN"/>
+                            <constraint firstItem="TOK-NI-hJ1" firstAttribute="width" secondItem="1e2-qA-orL" secondAttribute="width" id="cLQ-er-H0c"/>
+                            <constraint firstAttribute="centerX" secondItem="zMA-3D-mTR" secondAttribute="centerX" id="dk1-JW-qdD"/>
+                            <constraint firstItem="war-iH-Qu7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="hQc-n0-M73"/>
+                            <constraint firstAttribute="trailing" secondItem="Txv-Vp-Ija" secondAttribute="trailing" constant="20" id="lAi-cH-clC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F2s-MO-Mvt" secondAttribute="bottom" constant="20" id="nPd-sV-gQJ"/>
+                            <constraint firstItem="1e2-qA-orL" firstAttribute="leading" secondItem="TOK-NI-hJ1" secondAttribute="trailing" constant="8" id="rTr-fs-1Q8"/>
+                            <constraint firstItem="1e2-qA-orL" firstAttribute="leading" secondItem="TOK-NI-hJ1" secondAttribute="trailing" constant="8" id="siC-J0-MZ3"/>
+                            <constraint firstItem="TOK-NI-hJ1" firstAttribute="height" secondItem="1e2-qA-orL" secondAttribute="height" id="tXm-b8-kG5"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <connections>
+                        <outlet property="activityCountLabel" destination="zMA-3D-mTR" id="xcV-Cl-NnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="251" y="451"/>
         </scene>
     </scenes>
 </document>
