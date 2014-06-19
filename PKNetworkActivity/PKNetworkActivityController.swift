@@ -45,7 +45,7 @@ import Foundation
     // #MARK: Private
     
     struct Constants {
-        static let sharedController = PKNetworkActivityController.init()
+        static let sharedController = PKNetworkActivityController()
     }
     
     var spinLock = OS_SPINLOCK_INIT
