@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PKNetworkActivityController: NSObject {
+@objc class PKNetworkActivityController {
     
     class var sharedController: PKNetworkActivityController {
         return Constants.sharedController
