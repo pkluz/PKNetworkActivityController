@@ -10,28 +10,36 @@
 		F92868161953666D00679623 /* PKNetworkActivityController.h in Headers */ = {isa = PBXBuildFile; fileRef = F92868151953666D00679623 /* PKNetworkActivityController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F928682D1953667900679623 /* PKNetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928682C1953667900679623 /* PKNetworkActivityController.swift */; };
 		F928683719536DAA00679623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928683619536DAA00679623 /* AppDelegate.swift */; };
-		F928683919536DAA00679623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928683819536DAA00679623 /* ViewController.swift */; };
+		F928683919536DAA00679623 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928683819536DAA00679623 /* DemoViewController.swift */; };
 		F928683C19536DAA00679623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F928683A19536DAA00679623 /* Main.storyboard */; };
 		F928683E19536DAA00679623 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F928683D19536DAA00679623 /* Images.xcassets */; };
-		F928684A19536DAA00679623 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928684919536DAA00679623 /* DemoTests.swift */; };
+		F928685B19536F4E00679623 /* PKNetworkActivityController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92868101953666D00679623 /* PKNetworkActivityController.framework */; };
+		F928685C19536F4E00679623 /* PKNetworkActivityController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92868101953666D00679623 /* PKNetworkActivityController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F928684419536DAA00679623 /* PBXContainerItemProxy */ = {
+		F928685D19536F4E00679623 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F92868071953666D00679623 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F928683119536DAA00679623;
-			remoteInfo = Demo;
-		};
-		F928685119536DAC00679623 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F92868071953666D00679623 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F928683119536DAA00679623;
-			remoteInfo = Demo;
+			remoteGlobalIDString = F928680F1953666D00679623;
+			remoteInfo = PKNetworkActivityController;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F928685F1953730B00679623 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F928685C19536F4E00679623 /* PKNetworkActivityController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F92868101953666D00679623 /* PKNetworkActivityController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKNetworkActivityController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +49,9 @@
 		F928683219536DAA00679623 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F928683519536DAA00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F928683619536DAA00679623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F928683819536DAA00679623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F928683819536DAA00679623 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		F928683B19536DAA00679623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F928683D19536DAA00679623 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F928684319536DAA00679623 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F928684819536DAA00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F928684919536DAA00679623 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F928684019536DAA00679623 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F928685B19536F4E00679623 /* PKNetworkActivityController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +76,8 @@
 		F92868061953666D00679623 = {
 			isa = PBXGroup;
 			children = (
-				F92868121953666D00679623 /* PKNetworkActivity */,
 				F928683319536DAA00679623 /* Demo */,
-				F928684619536DAA00679623 /* DemoTests */,
+				F92868121953666D00679623 /* PKNetworkActivity */,
 				F92868111953666D00679623 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +87,6 @@
 			children = (
 				F92868101953666D00679623 /* PKNetworkActivityController.framework */,
 				F928683219536DAA00679623 /* Demo.app */,
-				F928684319536DAA00679623 /* DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F928683619536DAA00679623 /* AppDelegate.swift */,
-				F928683819536DAA00679623 /* ViewController.swift */,
+				F928683819536DAA00679623 /* DemoViewController.swift */,
 				F928683A19536DAA00679623 /* Main.storyboard */,
 				F928683D19536DAA00679623 /* Images.xcassets */,
 				F928683419536DAA00679623 /* Supporting Files */,
@@ -128,23 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				F928683519536DAA00679623 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F928684619536DAA00679623 /* DemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				F928684919536DAA00679623 /* DemoTests.swift */,
-				F928684719536DAA00679623 /* Supporting Files */,
-			);
-			path = DemoTests;
-			sourceTree = "<group>";
-		};
-		F928684719536DAA00679623 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F928684819536DAA00679623 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -188,34 +168,17 @@
 				F928682E19536DAA00679623 /* Sources */,
 				F928682F19536DAA00679623 /* Frameworks */,
 				F928683019536DAA00679623 /* Resources */,
+				F928685F1953730B00679623 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F928685E19536F4E00679623 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
 			productReference = F928683219536DAA00679623 /* Demo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F928684219536DAA00679623 /* DemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F928684E19536DAA00679623 /* Build configuration list for PBXNativeTarget "DemoTests" */;
-			buildPhases = (
-				F928683F19536DAA00679623 /* Sources */,
-				F928684019536DAA00679623 /* Frameworks */,
-				F928684119536DAA00679623 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F928684519536DAA00679623 /* PBXTargetDependency */,
-				F928685219536DAC00679623 /* PBXTargetDependency */,
-			);
-			name = DemoTests;
-			productName = DemoTests;
-			productReference = F928684319536DAA00679623 /* DemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -231,10 +194,6 @@
 					};
 					F928683119536DAA00679623 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					F928684219536DAA00679623 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = F928683119536DAA00679623;
 					};
 				};
 			};
@@ -253,7 +212,6 @@
 			targets = (
 				F928680F1953666D00679623 /* PKNetworkActivityController */,
 				F928683119536DAA00679623 /* Demo */,
-				F928684219536DAA00679623 /* DemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,13 +233,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F928684119536DAA00679623 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,31 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F928683919536DAA00679623 /* ViewController.swift in Sources */,
+				F928683919536DAA00679623 /* DemoViewController.swift in Sources */,
 				F928683719536DAA00679623 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F928683F19536DAA00679623 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F928684A19536DAA00679623 /* DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F928684519536DAA00679623 /* PBXTargetDependency */ = {
+		F928685E19536F4E00679623 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F928683119536DAA00679623 /* Demo */;
-			targetProxy = F928684419536DAA00679623 /* PBXContainerItemProxy */;
-		};
-		F928685219536DAC00679623 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F928683119536DAA00679623 /* Demo */;
-			targetProxy = F928685119536DAC00679623 /* PBXContainerItemProxy */;
+			target = F928680F1953666D00679623 /* PKNetworkActivityController */;
+			targetProxy = F928685D19536F4E00679623 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -483,42 +421,6 @@
 			};
 			name = Release;
 		};
-		F928684F19536DAA00679623 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		F928685019536DAA00679623 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,14 +446,6 @@
 			buildConfigurations = (
 				F928684C19536DAA00679623 /* Debug */,
 				F928684D19536DAA00679623 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		F928684E19536DAA00679623 /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F928684F19536DAA00679623 /* Debug */,
-				F928685019536DAA00679623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
