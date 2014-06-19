@@ -1,8 +1,6 @@
 PKNetworkActivityController
 ===========================
 A simple and lightweight network activity indicator controller written in **Swift**, exclusively for **iOS 8**.
-<br />
-<br />
 ## Features
 - **Thread-safe** implementation.
 - Builds as an **iOS 8 framework**.
