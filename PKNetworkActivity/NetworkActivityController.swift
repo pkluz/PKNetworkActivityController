@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 NSExceptional. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-@objc class PKNetworkActivityController {
+@objc (PKNetworkActivityController) public class NetworkActivityController {
     
-    class var sharedController: PKNetworkActivityController {
+    public class var sharedController: NetworkActivityController {
         return Constants.sharedController
     }
     
     /// The number of activities in progress. Iff the number is greater than 0, the network activity indicator is visible (unless modified by an external source).
-    var numberOfRegisteredActivities: Int = 0
+    public var numberOfRegisteredActivities: Int = 0
     
     /// Registers for network activity.
-    func registerActivity() {
+    public func registerActivity() {
         withUnsafePointer(&spinLock, OSSpinLockLock)
         
         numberOfRegisteredActivities += 1
@@ -30,7 +30,7 @@ import Foundation
     }
     
     /// Deregisters from network activity.
-    func deregisterActivity() {
+    public func deregisterActivity() {
         withUnsafePointer(&spinLock, OSSpinLockLock)
         
         let newValue = numberOfRegisteredActivities - 1
@@ -44,9 +44,9 @@ import Foundation
     
     // #MARK: Private
     
-    struct Constants {
-        static let sharedController = PKNetworkActivityController()
+    private struct Constants {
+        static let sharedController = NetworkActivityController()
     }
     
-    var spinLock = OS_SPINLOCK_INIT
+    private var spinLock = OS_SPINLOCK_INIT
 }

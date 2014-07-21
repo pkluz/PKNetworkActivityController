@@ -14,20 +14,20 @@ import PKNetworkActivityController
 When starting a network operation, make sure you register with the controller.
 
 ```
-PKNetworkActivityController.sharedController.registerActivity()
+NetworkActivityController.sharedController.registerActivity()
 ```
 
 After your network operation finishes (successful or not), remember to deregister.
 
 ```
-PKNetworkActivityController.sharedController.deregisterActivity()
+NetworkActivityController.sharedController.deregisterActivity()
 ```
 
 If you're interested in the number of registered activities, you can use the controller's property `numberOfRegisteredActivities`.
 
 ## Disclaimer
 
-While basically feature complete and stable, make sure you understand that **Swift is still in beta**, thus the API might change, although that's unlikely to happen for this module.
+While basically feature complete and stable, make sure you understand that **Swift is still in beta**, thus the API might change.
 
 ## License
 

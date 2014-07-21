@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F92868161953666D00679623 /* PKNetworkActivityController.h in Headers */ = {isa = PBXBuildFile; fileRef = F92868151953666D00679623 /* PKNetworkActivityController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F928682D1953667900679623 /* PKNetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928682C1953667900679623 /* PKNetworkActivityController.swift */; };
+		F92868161953666D00679623 /* NetworkActivityController.h in Headers */ = {isa = PBXBuildFile; fileRef = F92868151953666D00679623 /* NetworkActivityController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F928682D1953667900679623 /* NetworkActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928682C1953667900679623 /* NetworkActivityController.swift */; };
 		F928683719536DAA00679623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928683619536DAA00679623 /* AppDelegate.swift */; };
 		F928683919536DAA00679623 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928683819536DAA00679623 /* DemoViewController.swift */; };
 		F928683C19536DAA00679623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F928683A19536DAA00679623 /* Main.storyboard */; };
@@ -44,8 +44,8 @@
 /* Begin PBXFileReference section */
 		F92868101953666D00679623 /* PKNetworkActivityController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKNetworkActivityController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92868141953666D00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F92868151953666D00679623 /* PKNetworkActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKNetworkActivityController.h; sourceTree = "<group>"; };
-		F928682C1953667900679623 /* PKNetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKNetworkActivityController.swift; sourceTree = "<group>"; };
+		F92868151953666D00679623 /* NetworkActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkActivityController.h; sourceTree = "<group>"; };
+		F928682C1953667900679623 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityController.swift; sourceTree = "<group>"; };
 		F928683219536DAA00679623 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F928683519536DAA00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F928683619536DAA00679623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		F92868121953666D00679623 /* PKNetworkActivity */ = {
 			isa = PBXGroup;
 			children = (
-				F92868151953666D00679623 /* PKNetworkActivityController.h */,
-				F928682C1953667900679623 /* PKNetworkActivityController.swift */,
+				F92868151953666D00679623 /* NetworkActivityController.h */,
+				F928682C1953667900679623 /* NetworkActivityController.swift */,
 				F92868131953666D00679623 /* Supporting Files */,
 			);
 			path = PKNetworkActivity;
@@ -136,7 +136,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92868161953666D00679623 /* PKNetworkActivityController.h in Headers */,
+				F92868161953666D00679623 /* NetworkActivityController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +161,9 @@
 			productReference = F92868101953666D00679623 /* PKNetworkActivityController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F928683119536DAA00679623 /* Demo */ = {
+		F928683119536DAA00679623 /* PKNetworkActivity - Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F928684B19536DAA00679623 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = F928684B19536DAA00679623 /* Build configuration list for PBXNativeTarget "PKNetworkActivity - Demo" */;
 			buildPhases = (
 				F928682E19536DAA00679623 /* Sources */,
 				F928682F19536DAA00679623 /* Frameworks */,
@@ -175,7 +175,7 @@
 			dependencies = (
 				F928685E19536F4E00679623 /* PBXTargetDependency */,
 			);
-			name = Demo;
+			name = "PKNetworkActivity - Demo";
 			productName = Demo;
 			productReference = F928683219536DAA00679623 /* Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -211,7 +211,7 @@
 			projectRoot = "";
 			targets = (
 				F928680F1953666D00679623 /* PKNetworkActivityController */,
-				F928683119536DAA00679623 /* Demo */,
+				F928683119536DAA00679623 /* PKNetworkActivity - Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -240,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F928682D1953667900679623 /* PKNetworkActivityController.swift in Sources */,
+				F928682D1953667900679623 /* NetworkActivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,14 +440,16 @@
 				F92868281953666D00679623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F928684B19536DAA00679623 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		F928684B19536DAA00679623 /* Build configuration list for PBXNativeTarget "PKNetworkActivity - Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F928684C19536DAA00679623 /* Debug */,
 				F928684D19536DAA00679623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
