@@ -19,19 +19,19 @@ import UIKit
     
     /// Registers for network activity.
     public func registerActivity() {
-        withUnsafePointer(&spinLock, OSSpinLockLock)
+        withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
         
         numberOfRegisteredActivities += 1
         if numberOfRegisteredActivities > 0 {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         }
         
-        withUnsafePointer(&spinLock, OSSpinLockUnlock)
+        withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
     }
     
     /// Deregisters from network activity.
     public func deregisterActivity() {
-        withUnsafePointer(&spinLock, OSSpinLockLock)
+        withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
         
         let newValue = numberOfRegisteredActivities - 1
         numberOfRegisteredActivities = newValue >= 0 ? newValue : 0
@@ -39,7 +39,7 @@ import UIKit
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
         
-        withUnsafePointer(&spinLock, OSSpinLockUnlock)
+        withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
     }
     
     // #MARK: Private
