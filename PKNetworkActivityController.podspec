@@ -10,6 +10,5 @@ s.summary                     = 'A simple and lightweight network activity indic
   s.ios.deployment_target     = '8.0'
   s.requires_arc              = true
   s.source                    = { :git => 'https://github.com/pkluz/PKNetworkActivityController.git', :tag => s.version.to_s }
-  s.source_files              = 'PKNetworkActivityController/**/*.{h,swift}'
-  s.resources                 = 'PKNetworkActivityController/*.xcassets'
+  s.source_files              = 'PKNetworkActivity/**/*.{h,swift}'
 end
