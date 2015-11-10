@@ -8,7 +8,8 @@
 
 import UIKit
 
-@objc (PKNetworkActivityController) public class NetworkActivityController {
+@objc (PKNetworkActivityController)
+public class NetworkActivityController : NSObject {
     
     public class var sharedController: NetworkActivityController {
         return Constants.sharedController

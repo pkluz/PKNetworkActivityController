@@ -15,6 +15,7 @@
 		F928683E19536DAA00679623 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F928683D19536DAA00679623 /* Images.xcassets */; };
 		F928685B19536F4E00679623 /* PKNetworkActivityController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92868101953666D00679623 /* PKNetworkActivityController.framework */; };
 		F928685C19536F4E00679623 /* PKNetworkActivityController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92868101953666D00679623 /* PKNetworkActivityController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F954E93C1BF1F5DA00057923 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F954E93B1BF1F5DA00057923 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +47,13 @@
 		F92868141953666D00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92868151953666D00679623 /* NetworkActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkActivityController.h; sourceTree = "<group>"; };
 		F928682C1953667900679623 /* NetworkActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityController.swift; sourceTree = "<group>"; };
-		F928683219536DAA00679623 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F928683219536DAA00679623 /* PKNetworkActivity - Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PKNetworkActivity - Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F928683519536DAA00679623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F928683619536DAA00679623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F928683819536DAA00679623 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		F928683B19536DAA00679623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F928683D19536DAA00679623 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F954E93B1BF1F5DA00057923 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				F92868101953666D00679623 /* PKNetworkActivityController.framework */,
-				F928683219536DAA00679623 /* Demo.app */,
+				F928683219536DAA00679623 /* PKNetworkActivity - Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 				F928683619536DAA00679623 /* AppDelegate.swift */,
 				F928683819536DAA00679623 /* DemoViewController.swift */,
 				F928683A19536DAA00679623 /* Main.storyboard */,
+				F954E93B1BF1F5DA00057923 /* Launch Screen.storyboard */,
 				F928683D19536DAA00679623 /* Images.xcassets */,
 				F928683419536DAA00679623 /* Supporting Files */,
 			);
@@ -177,7 +180,7 @@
 			);
 			name = "PKNetworkActivity - Demo";
 			productName = Demo;
-			productReference = F928683219536DAA00679623 /* Demo.app */;
+			productReference = F928683219536DAA00679623 /* PKNetworkActivity - Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +189,9 @@
 		F92868071953666D00679623 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = NSExceptional;
 				TargetAttributes = {
 					F928680F1953666D00679623 = {
@@ -221,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F954E93C1BF1F5DA00057923 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +377,7 @@
 				INFOPLIST_FILE = PKNetworkActivity/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NSExceptional.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PKNetworkActivityController;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -388,6 +395,7 @@
 				INFOPLIST_FILE = PKNetworkActivity/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NSExceptional.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PKNetworkActivityController;
 				SKIP_INSTALL = YES;
 			};
@@ -397,7 +405,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -405,6 +412,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NSExceptional.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -413,10 +421,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NSExceptional.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

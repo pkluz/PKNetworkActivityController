@@ -20,7 +20,7 @@ class DemoViewController: UIViewController {
     }
     
     func updateUserInterface() {
-        var countString = String(NetworkActivityController.sharedController.numberOfRegisteredActivities)
+        let countString = String(NetworkActivityController.sharedController.numberOfRegisteredActivities)
         activityCountLabel.text = countString
     }
     
