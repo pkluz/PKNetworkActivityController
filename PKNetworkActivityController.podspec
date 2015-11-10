@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name                      = 'PKHUD'
-  s.module_name               = 'PKHUD'
+  s.name                      = 'PKNetworkActivityController'
+  s.module_name               = 'PKNetworkActivityController'
   s.version                   = '0.0.1'
 s.summary                     = 'A simple and lightweight network activity indicator controller written in Swift, exclusively for iOS 8 and above.'
   s.homepage                  = 'https://github.com/pkluz/PKNetworkActivityController'
