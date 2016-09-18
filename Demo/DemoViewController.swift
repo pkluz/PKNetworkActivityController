@@ -12,11 +12,11 @@ import PKNetworkActivityController
 class DemoViewController: UIViewController {
     
     @IBOutlet var activityCountLabel: UILabel!
-    var timer: NSTimer?
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateUserInterface"), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(DemoViewController.updateUserInterface), userInfo: nil, repeats: true)
     }
     
     func updateUserInterface() {
@@ -24,22 +24,22 @@ class DemoViewController: UIViewController {
         activityCountLabel.text = countString
     }
     
-    @IBAction func registerNetworkActivity(sender: AnyObject) {
+    @IBAction func registerNetworkActivity(_ sender: AnyObject) {
         NetworkActivityController.sharedController.registerActivity()
     }
     
-    @IBAction func deregisterNetworkActivity(sender: AnyObject) {
+    @IBAction func deregisterNetworkActivity(_ sender: AnyObject) {
         NetworkActivityController.sharedController.deregisterActivity()
     }
     
-    @IBAction func asyncRegisterNetworkActivity(sender: AnyObject) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+    @IBAction func asyncRegisterNetworkActivity(_ sender: AnyObject) {
+        DispatchQueue.global().async {
             NetworkActivityController.sharedController.registerActivity()
         }
     }
     
-    @IBAction func asyncDeregisterNetworkActivity(sender: AnyObject) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+    @IBAction func asyncDeregisterNetworkActivity(_ sender: AnyObject) {
+        DispatchQueue.global().async {
             NetworkActivityController.sharedController.deregisterActivity()
         }
     }
