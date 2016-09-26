@@ -9,45 +9,45 @@
 import UIKit
 
 @objc (PKNetworkActivityController)
-public class NetworkActivityController : NSObject {
+open class NetworkActivityController : NSObject {
     
-    public class var sharedController: NetworkActivityController {
+    open class var sharedController: NetworkActivityController {
         return Constants.sharedController
     }
     
     /// The number of activities in progress. Iff the number is greater than 0, the network activity indicator is visible (unless modified by an external source).
-    public var numberOfRegisteredActivities: Int = 0
+    open var numberOfRegisteredActivities: Int = 0
     
     /// Registers for network activity.
-    public func registerActivity() {
-        withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
+    open func registerActivity() {
+        withUnsafeMutablePointer(to: &spinLock, OSSpinLockLock)
         
         numberOfRegisteredActivities += 1
         if numberOfRegisteredActivities > 0 {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
         
-        withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
+        withUnsafeMutablePointer(to: &spinLock, OSSpinLockUnlock)
     }
     
     /// Deregisters from network activity.
-    public func deregisterActivity() {
-        withUnsafeMutablePointer(&spinLock, OSSpinLockLock)
+    open func deregisterActivity() {
+        withUnsafeMutablePointer(to: &spinLock, OSSpinLockLock)
         
         let newValue = numberOfRegisteredActivities - 1
         numberOfRegisteredActivities = newValue >= 0 ? newValue : 0
         if numberOfRegisteredActivities == 0 {
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
         
-        withUnsafeMutablePointer(&spinLock, OSSpinLockUnlock)
+        withUnsafeMutablePointer(to: &spinLock, OSSpinLockUnlock)
     }
     
     // #MARK: Private
     
-    private struct Constants {
+    fileprivate struct Constants {
         static let sharedController = NetworkActivityController()
     }
     
-    private var spinLock = OS_SPINLOCK_INIT
+    fileprivate var spinLock = OS_SPINLOCK_INIT
 }
